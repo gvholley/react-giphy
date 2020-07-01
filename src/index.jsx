@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-class Hello extends Component { // A stateful component needs to
- constructor(props) { // be promoted into a class
- super(props);
- this.state = { clicked: false }; // defines initial state
+class Hello extends Component {
+ // [...]
+ handleClick() {
+ this.setState({ clicked: true });
  }
  render() {
  return (
- <h1 className={this.state.clicked ? "clicked" : ""}>
+ <h1 className={this.state.clicked ? "clicked" : ""}
+ onClick={this.handleClick}>
 Hello, {this.props.name}
 </h1>
  );
