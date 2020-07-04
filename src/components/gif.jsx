@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 
-class SearchBar extends Component {
+class Gif extends Component {
   render() {
+    const src = `https://media.giphy.com/media/${this.props.id}/giphy.gif`;
     return (
-      <input type="text" className="form-control form-search" />
+      <img src={src} alt="" className="gif"/>
     );
   }
 }
+
+export default Gif;
