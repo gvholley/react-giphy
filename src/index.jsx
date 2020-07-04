@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
-class Hello extends Component {
- // [...]
- handleClick() {
- this.setState({ clicked: true });
- }
- render() {
- return (
- <h1 className={this.state.clicked ? "clicked" : ""}
- onClick={this.handleClick}>
-Hello, {this.props.name}
-</h1>
- );
- }
+import ReactDOM from 'react-dom';
+
+import '../assets/stylesheets/application.scss';
+import App from './components/app.jsx';
+
+const root = document.getElementById('root');
+if (root) {
+  ReactDOM.render(
+    <App />,
+    root);
 }
