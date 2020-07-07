@@ -10,7 +10,7 @@ class App extends Component {
 
     this.state = {
       gifs: [],
-      selectedGifId: null // "Ju7l5y9osyymQ"
+      selectedGifId: null // "Zk9mW5OmXTz9e"
     };
   }
 
@@ -21,7 +21,7 @@ class App extends Component {
       rating: 'g',
       limit: 10
     }, (error, result) => {
-      // Result contains gif data!
+      // could be err, res
       this.setState({
         gifs: result.data
       });
